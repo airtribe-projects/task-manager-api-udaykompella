@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const res = fs.readFileSync("./task.json", "utf-8", (err, res) => {
+const res = fs.readFile("./task.json", "utf-8", (err, res) => {
   if (err) {
     console.log(err, "Error while reading tasks file");
   }
